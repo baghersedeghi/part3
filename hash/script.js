@@ -1,0 +1,33 @@
+window.addEventListener("hashchange", (e) => {
+    router()
+})
+function router() {
+    switch (location.hash) {
+        case "":
+            render({ title: "home", color: "var(--danger-color)", href: "#home" })
+            break;
+        case "#home":
+            render({ title: "home", color: "var(--danger-color)", href: "#home" })
+            break;
+        case "#search":
+            render({ title: "search", color: "var(--primary-color)", href: "#search" })
+            break;
+        case "#likes":
+            render({ title: "likes", color: "var(--yellow-color)", href: "#likes" })
+            break;
+        case "#profile":
+            render({ title: "profile", color: "var(--pink-color)", href: "#profile" })
+            break;
+    }
+}
+function render (data){
+document.querySelector("h1").innerHTML=data.title
+document.querySelector("main").style.backgroundColor=data.color
+document.querySelectorAll("a").forEach((element)=>{
+    if(element.href.includes(data.href)){
+        element.style.color="black"
+    }else{
+        element.style.color="var(--dark-color)"
+    }
+})
+}

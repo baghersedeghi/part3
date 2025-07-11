@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="todo-app">
+        <h2 class="app-title">TO-DO LIST</h2>
+        
+        <form class="search-container">
+            <input type="text" id="search-box" class="search-input" placeholder="Search tasks...">
+        </form>
+        
+        <h4>Your List</h4>
+        
+        <ul id="todo-list" class="todo-list">
+            <li class="todo-item">
+                <p class="todo-text">Review CSS Grid concepts</p>
+                <button class="btn btn-delete">Delete</button>
+            </li>
+            <li class="todo-item">
+                <p class="todo-text">Practice JavaScript exercises</p>
+                <button class="btn btn-delete">Delete</button>
+            </li>
+            <li class="todo-item">
+                <p class="todo-text">Read a chapter of a new book</p>
+                <button class="btn btn-delete">Delete</button>
+            </li>
+        </ul>
+        
+        <form id="add-form" class="add-form">
+            <input type="text" id="add-input" class="add-input" placeholder="Add a new task...">
+            <button type="submit" class="btn btn-add">Add</button>
+        </form>
+    </main>
+<script src="script.js"></script>
+</body>
+</html>
